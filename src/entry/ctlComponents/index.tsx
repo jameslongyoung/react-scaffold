@@ -1,5 +1,7 @@
 import * as React from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import {Button} from 'antd-mobile';
+import './index.less';
 
 interface IIndexCtlProps {
     count: number,
@@ -8,7 +10,12 @@ interface IIndexCtlProps {
 
 class IndexCtl extends React.PureComponent<IIndexCtlProps, {}> {
     public render() {
-        return <div onClick = {this.props.click}>{this.props.count}</div>;
+        return (
+            <div onClick = {this.props.click}>
+                {this.props.count}
+                <Button type= 'primary'>test</Button>
+            </div>
+        ) 
     }
 }
 
